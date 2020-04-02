@@ -1,0 +1,69 @@
+#skills {
+    background-color: $gray;
+    .contents-title {
+        margin-bottom: 1em;
+    }
+}
+
+.skills-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    @include media('sp') {
+        display: block;
+    }
+}
+
+.skills-item {
+    background: $bg;
+    @include shadow;
+	display: block;
+    width: 32%;
+    @include media('tab') {
+        width: 47%;
+    }
+    @include media('sp') {
+        width: 100%;
+    }
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    i {
+        font-size: 40px;
+    }
+}
+
+
+.fa-html5 {
+    color: #E76233;
+}
+
+.fa-css3 {
+    color: #3996D5;
+}
+
+.fa-js-square {
+    color: #F8D23D;
+}
+
+.fa-wordpress {
+    color: #0773AA;
+}
+
+.fa-adobe {
+    color: #FE0100;
+}
+
+.fa-git {
+    color: #EF5132;
+}
+
+.fa-gulp {
+    color: #EB4A4B;
+}
+
+.skills-item-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}

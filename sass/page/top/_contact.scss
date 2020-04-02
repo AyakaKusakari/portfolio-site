@@ -1,0 +1,118 @@
+// フォームの初期化
+.contact-text {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    border-radius: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: 1em;
+    padding: 0.4em 0.8em;
+    width: 100%;
+    &:focus {
+        border: 1px solid rgba(0, 0, 0, 0.32);
+        box-shadow: none;
+        outline: none;
+    }
+}
+.contact-textarea {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    border-radius: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: 1em;
+    height: 100px;
+    padding: 0.4em 0.8em;
+    width: 100%;
+    &:focus {
+        border: 1px solid rgba(0, 0, 0, 0.32);
+        box-shadow: none;
+        outline: none;
+    }
+}
+.contact-submit {
+    -webkit-appearance: none;
+    background-color: rgba(0, 0, 0, 0.32);
+    background-image: none;
+    border: none;
+    border-radius: 0;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+    margin: 0 0 1em;
+    padding: 0.6em 2em;
+    text-decoration: none;
+}  
+.contact-submit:hover,
+.contact-submit:focus {
+    outline: none;
+}
+.contact-submit::-moz-foucus-inner {
+    border: none;
+    padding: 0;
+}
+// フォームの初期化ここまで
+#contact {
+    .inner {
+        width: 900px;
+    }
+}
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    @include media('sp') {
+        display: block;
+    }
+}
+.contact-title {
+    @include media('sp') {
+        margin-bottom: 1rem;
+    }
+}
+.required {
+    background: #d9534f;
+    border: 1px solid #d43f3a;
+    color: $bg;
+    padding: 0.3rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    margin-right: 1rem;
+}
+.contact-text, .contact-textarea {
+    width: 70%;
+    @include media('sp') {
+        width: 100%;
+    }
+    &:focus {
+        box-shadow: 0 0px 10px lighten($orange, 10%);
+        border: 1px solid lighten($orange, 5%);
+        @include delay;
+    }
+}
+.contact-btn {
+    text-align: center;
+}
+.contact-submit {
+    color: $bg;
+    border-radius: 25px;
+    display: inline-block;
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    background-color: $orange;
+    overflow: hidden;
+    &:hover {
+        background-color: lighten($orange, 10%);
+        @include delay;
+    }
+}

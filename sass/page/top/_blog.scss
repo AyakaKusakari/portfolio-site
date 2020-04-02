@@ -1,0 +1,115 @@
+#blog {
+    background-color: $gray;
+    .contents-title {
+        margin-bottom: 1em;
+    }
+    .contents-description {
+        a {
+            color: #337ab7;
+            font-weight: 600;
+            &:hover {
+                color: #23527c;
+                text-decoration: underline;
+                @include delay;
+            }
+        }
+    }
+}
+.blog-item {
+    display: flex;
+    margin: 2rem 0;
+    @include media('sp') {
+        display: block;
+    }
+}
+.blog-link, .blog-item-body {
+    width: 50%;
+    @include media('sp') {
+        width: 100%;
+    }
+}
+.blog-link {
+    box-shadow: 0 0px 20px rgba(0,0,0,0.1);
+    background-color: $bg;
+    &:hover {
+        @include shadow;
+        @include delay;
+    }
+}
+.blog-link-box {
+    padding:10px;
+    display:flex;
+    background-color: $bg;
+}
+
+.blog-img-box {
+    width:50%;
+    float:left;
+}
+.blog-img-box div {
+    min-height:170px;
+    background-size:cover;
+    background-position:center center;
+}
+.blog-text-box {
+    width:50%;
+    float:left;
+    padding-left:20px;
+    line-height:1.7;
+    margin:0;
+}
+.blog-title {
+    font-size: 1.2rem;
+    font-weight:600;
+    padding:0;
+    margin:0;
+}
+@media only screen and (max-width:479px) {
+    .blog-img-box div {
+        min-height:80px;
+    }
+    .blog-text-box {
+        margin-left:10px;
+        line-height:1.5;
+    }
+    .blog-title {
+        margin:0;
+    }
+}
+
+.blog-item-body {
+    position: relative;
+    display: inline-block;
+    margin: 1.5em 0 1.5em 1.5em;
+    @include media('sp') {
+        margin: 1.5em 0;
+    }
+    padding: 7px 10px;
+    min-width: 120px;
+    max-width: 100%;
+    background: lighten($orange, 27%);
+    border-radius: 8px;
+    &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    margin-top: -15px;
+    border: 15px solid transparent;
+    border-right: 15px solid lighten($orange, 27%);
+    @include media('sp') {
+        content: "";
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        margin-top: 0;
+        margin-left: -15px;
+        border: 15px solid transparent;
+        border-bottom: 15px solid lighten($orange, 27%);
+    }
+    }
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}

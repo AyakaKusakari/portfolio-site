@@ -1,0 +1,98 @@
+#single-content {
+    background-color: $bg;
+    .inner {
+        padding-bottom: 40px;
+    }
+}
+.entry {
+    background: $bg;
+	@include shadow;
+	display: block;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    padding: 3rem;
+    @include media('sp') {
+        padding: 2rem;
+    }
+    border-radius: 5px;
+}
+.entry-label {
+    background: $orange;
+	color: $bg;
+	display: inline-block;
+    font-size: 0.8rem;
+    padding: 4px 16px;
+    @include media('sp') {
+        font-size: 0.6rem;
+        padding: 4px 10px;
+    }
+	text-align: center;
+}
+.entry-title {
+    margin-top: 1rem;
+    margin-bottom: 1.2rem;
+    font-size: 1.8rem;
+    @include media('sp') {
+        font-size: 1.2rem;
+    }
+}
+.entry-img {
+    @include shadow;
+}
+.entry-body {
+    margin-top: 30px;
+    @include media('sp') {
+        margin-top: 0;
+    }
+    padding: 20px;
+    h2 {
+        font-size: 1.2em;
+        margin-bottom: 1em;
+        margin-top: 2em;
+        padding-left: 2em;
+        position: relative;
+        &:before {
+            color: $orange;
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free", sans-serif;
+            font-size: 1em;
+            left: 0;
+            position: absolute;
+            top: 5px;   
+        }
+    }
+    p {
+        margin-top: 1.2rem;
+    }
+    a {
+        color: #337ab7;
+        font-weight: 600;
+        &:hover {
+            color: #23527c;
+            text-decoration: underline;
+            @include delay;
+        }
+    }
+    strong {
+        font-weight: bold;
+    }
+}
+.top-btn {
+    color: $bg;
+    border-radius: 25px;
+    height: 40px;
+    width: 450px;
+    @include media('sp') {
+        width: 270px;
+    }
+    text-align: center;
+    line-height: 40px;
+    background: #f4623a;
+    display: block;
+    margin: 20px auto 0 auto;
+    &:hover {
+        cursor: pointer;
+        background-color: lighten($orange, 10%);
+    }
+}

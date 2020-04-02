@@ -1,0 +1,30 @@
+#main {
+    background: url(../img/main.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    &::before{
+        background-color: rgba(0,0,0,0.5);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: '';
+    }   
+}
+.main-txt {
+    text-align: center;
+    color: $bg;
+    font-size: 3.5rem;
+    font-weight: bold;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    @include media('sp') {
+        font-size: 2rem;
+    }
+}

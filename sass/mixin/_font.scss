@@ -1,0 +1,107 @@
+@mixin  header-logo {
+    font-size: 2em;
+    font-weight: bold;
+    @include media('sp') {
+        font-size: 1.5em;
+    }
+    &:hover {
+        @include hover-opacity;
+    }
+}
+
+@mixin contents-title {
+    font-size: 3em;
+    @include media('sp') {
+        font-size: 2em;
+    }
+    position: relative;
+    margin-bottom: 2em;
+    text-align: center;
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        width: 50px;
+        height: 3px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        background-color: $orange;
+    }
+}
+
+.contents-title {
+    @include contents-title;
+}
+
+@mixin title-back {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: -18px;
+    z-index: 0;
+    opacity: 0.1;
+    font-size: 4.5rem;
+    @include media('sp') {
+        font-size: 3rem;
+        top: -15px;
+    }
+}
+
+.title-back{
+    @include title-back;
+}
+
+@mixin sub-title {    
+    position: relative;
+    display: inline-block;
+    padding: 0 55px;
+    font-size: 1.5em;
+    margin-bottom: 2em;
+    &:before, &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        display: inline-block;
+        width: 45px;
+        height: 1px;
+        background-color: $orange;
+    }
+    &:before {
+        left:0;
+    }
+    &:after {
+        right: 0;
+    }
+}
+
+@mixin item-title {
+    position: relative;
+    padding: 0.5em;
+    background: lighten($orange, 25%);
+    color: $bg;
+    &::before {
+        position: absolute;
+        content: '';
+        top: 100%;
+        left: 0;
+        border: none;
+        border-bottom: solid 15px transparent;
+        border-right: solid 20px $orange;
+    }
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.red-bold {
+    font-weight: bold;
+    color: #E60111;
+}
+
+.contents-description {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}

@@ -1,0 +1,13 @@
+@charset "utf-8";
+/*
+theme Name: Portfolio
+Author: Ayaka Kusakari
+Description: 自作テーマ
+version： 1.0.0
+*/
+.wpcf7-form-control-wrap {
+	width: 70%;
+}
+.contact-text, .contact-textarea {
+	width: 100%;
+}
